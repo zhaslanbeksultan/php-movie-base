@@ -1,0 +1,330 @@
+[
+    {
+        "id": 1,
+        "movie_id": 1,
+        "author": "Emma L.",
+        "rating": 5,
+        "text": "Heartwarming and inspiring. The chemistry between the two leads is unforgettable!",
+        "date": "2025-10-18"
+    },
+    {
+        "id": 2,
+        "movie_id": 1,
+        "author": "Tom R.",
+        "rating": 4,
+        "text": "A touching story about friendship and humanity. Brilliant French cinema.",
+        "date": "2025-10-18"
+    },
+    {
+        "id": 3,
+        "movie_id": 2,
+        "author": "Nina S.",
+        "rating": 5,
+        "text": "A visually stunning sci-fi masterpiece with deep emotional impact.",
+        "date": "2025-10-18"
+    },
+    {
+        "id": 4,
+        "movie_id": 2,
+        "author": "Lucas P.",
+        "rating": 4,
+        "text": "Complex, moving, and thought-provoking. Zimmer’s music gives chills!",
+        "date": "2025-10-18"
+    },
+    {
+        "id": 5,
+        "movie_id": 3,
+        "author": "Sarah W.",
+        "rating": 5,
+        "text": "One of the greatest films ever made. Hope and redemption in their purest form.",
+        "date": "2025-10-18"
+    },
+    {
+        "id": 6,
+        "movie_id": 3,
+        "author": "Ethan D.",
+        "rating": 5,
+        "text": "Brilliantly written and emotionally powerful. Morgan Freeman’s narration is iconic.",
+        "date": "2025-10-18"
+    },
+    {
+        "id": 7,
+        "movie_id": 4,
+        "author": "Hannah K.",
+        "rating": 4,
+        "text": "Sharp, funny, and full of twists. Guy Ritchie at his best!",
+        "date": "2025-10-18"
+    },
+    {
+        "id": 8,
+        "movie_id": 4,
+        "author": "Mark T.",
+        "rating": 5,
+        "text": "Stylish and hilarious — every actor nails their role perfectly.",
+        "date": "2025-10-18"
+    },
+    {
+        "id": 9,
+        "movie_id": 5,
+        "author": "Olivia F.",
+        "rating": 5,
+        "text": "Beautiful, emotional, and unforgettable. A true masterpiece about humanity.",
+        "date": "2025-10-18"
+    },
+    {
+        "id": 10,
+        "movie_id": 5,
+        "author": "Jake C.",
+        "rating": 4,
+        "text": "Long but mesmerizing. Tom Hanks delivers another great performance.",
+        "date": "2025-10-18"
+    },
+    {
+        "id": 11,
+        "movie_id": 6,
+        "author": "Sophia N.",
+        "rating": 5,
+        "text": "Mind-bending and suspenseful. Keeps you guessing until the very end.",
+        "date": "2025-10-18"
+    },
+    {
+        "id": 12,
+        "movie_id": 6,
+        "author": "Daniel V.",
+        "rating": 4,
+        "text": "Dark, intelligent, and brilliantly acted. Scorsese never disappoints.",
+        "date": "2025-10-18"
+    },
+    {
+        "id": 13,
+        "movie_id": 7,
+        "author": "Alice M.",
+        "rating": 5,
+        "text": "Epic and emotional. The best finale a trilogy could ever have.",
+        "date": "2025-10-18"
+    },
+    {
+        "id": 14,
+        "movie_id": 7,
+        "author": "Kevin J.",
+        "rating": 5,
+        "text": "A breathtaking conclusion filled with courage and sacrifice.",
+        "date": "2025-10-18"
+    },
+    {
+        "id": 15,
+        "movie_id": 8,
+        "author": "Maria D.",
+        "rating": 5,
+        "text": "A timeless story with humor and heart. Tom Hanks is perfection.",
+        "date": "2025-10-18"
+    },
+    {
+        "id": 16,
+        "movie_id": 8,
+        "author": "Liam F.",
+        "rating": 4,
+        "text": "Funny, sad, and inspiring — one of the most memorable movies ever.",
+        "date": "2025-10-18"
+    },
+    {
+        "id": 17,
+        "movie_id": 9,
+        "author": "Chloe B.",
+        "rating": 5,
+        "text": "An action masterpiece. The T-1000 still looks terrifying decades later.",
+        "date": "2025-10-18"
+    },
+    {
+        "id": 18,
+        "movie_id": 9,
+        "author": "Oscar G.",
+        "rating": 4,
+        "text": "Groundbreaking effects and a strong story about destiny and choice.",
+        "date": "2025-10-18"
+    },
+    {
+        "id": 19,
+        "movie_id": 10,
+        "author": "Emily K.",
+        "rating": 5,
+        "text": "Uplifting and funny. A wonderful film about friendship and acceptance.",
+        "date": "2025-10-18"
+    },
+    {
+        "id": 20,
+        "movie_id": 10,
+        "author": "Ben S.",
+        "rating": 4,
+        "text": "Charming performances and a great message about equality and respect.",
+        "date": "2025-10-18"
+    },
+    {
+        "id": 21,
+        "movie_id": 11,
+        "author": "Isabella L.",
+        "rating": 5,
+        "text": "A magical beginning to an unforgettable journey through Middle-earth.",
+        "date": "2025-10-18"
+    },
+    {
+        "id": 22,
+        "movie_id": 11,
+        "author": "Ryan P.",
+        "rating": 5,
+        "text": "Visually stunning and emotionally powerful — a fantasy masterpiece.",
+        "date": "2025-10-18"
+    },
+    {
+        "id": 23,
+        "movie_id": 12,
+        "author": "Grace H.",
+        "rating": 5,
+        "text": "Beautiful, emotional, and imaginative. Miyazaki’s best work.",
+        "date": "2025-10-18"
+    },
+    {
+        "id": 24,
+        "movie_id": 12,
+        "author": "Elliot M.",
+        "rating": 5,
+        "text": "A breathtaking mix of magic, mystery, and childhood wonder.",
+        "date": "2025-10-18"
+    },
+    {
+        "id": 25,
+        "movie_id": 13,
+        "author": "Victoria A.",
+        "rating": 5,
+        "text": "Dark, bold, and brilliant. The twist still shocks me every time.",
+        "date": "2025-10-18"
+    },
+    {
+        "id": 26,
+        "movie_id": 13,
+        "author": "Noah L.",
+        "rating": 4,
+        "text": "A disturbing yet fascinating story about identity and chaos.",
+        "date": "2025-10-18"
+    },
+    {
+        "id": 27,
+        "movie_id": 14,
+        "author": "Sophie G.",
+        "rating": 5,
+        "text": "Epic scale, powerful emotions, and unforgettable music.",
+        "date": "2025-10-18"
+    },
+    {
+        "id": 28,
+        "movie_id": 14,
+        "author": "David R.",
+        "rating": 4,
+        "text": "Visually grand and emotionally strong — a modern classic.",
+        "date": "2025-10-18"
+    },
+    {
+        "id": 29,
+        "movie_id": 15,
+        "author": "Amelia P.",
+        "rating": 5,
+        "text": "Mind-blowing and emotional. Nolan at his absolute best.",
+        "date": "2025-10-18"
+    },
+    {
+        "id": 30,
+        "movie_id": 15,
+        "author": "Jack H.",
+        "rating": 4,
+        "text": "A complex dream within a dream — visually stunning storytelling.",
+        "date": "2025-10-18"
+    },
+    {
+        "id": 31,
+        "movie_id": 16,
+        "author": "Natalie C.",
+        "rating": 5,
+        "text": "Tarantino’s masterpiece — stylish, brutal, and unforgettable.",
+        "date": "2025-10-18"
+    },
+    {
+        "id": 32,
+        "movie_id": 16,
+        "author": "George F.",
+        "rating": 5,
+        "text": "Incredible dialogue and direction — pure cinema magic.",
+        "date": "2025-10-18"
+    },
+    {
+        "id": 33,
+        "movie_id": 17,
+        "author": "Lily W.",
+        "rating": 4,
+        "text": "Classic Hollywood storytelling at its finest. Long but beautiful.",
+        "date": "2025-10-18"
+    },
+    {
+        "id": 34,
+        "movie_id": 17,
+        "author": "Henry O.",
+        "rating": 5,
+        "text": "A timeless romantic epic with unforgettable performances.",
+        "date": "2025-10-18"
+    },
+    {
+        "id": 35,
+        "movie_id": 18,
+        "author": "Ella N.",
+        "rating": 5,
+        "text": "An incredible middle chapter — thrilling, emotional, and visually stunning.",
+        "date": "2025-10-18"
+    },
+    {
+        "id": 36,
+        "movie_id": 18,
+        "author": "William B.",
+        "rating": 5,
+        "text": "A masterpiece of fantasy storytelling. Jackson’s vision is unmatched.",
+        "date": "2025-10-18"
+    },
+    {
+        "id": 37,
+        "movie_id": 19,
+        "author": "Zoe T.",
+        "rating": 5,
+        "text": "Beautiful and tragic. Jean Reno’s performance is unforgettable.",
+        "date": "2025-10-18"
+    },
+    {
+        "id": 38,
+        "movie_id": 19,
+        "author": "Max E.",
+        "rating": 4,
+        "text": "Emotional and stylish — a perfect blend of action and heart.",
+        "date": "2025-10-18"
+    },
+    {
+        "id": 39,
+        "movie_id": 20,
+        "author": "Charlotte D.",
+        "rating": 5,
+        "text": "A dark and brilliant superhero epic. Heath Ledger’s Joker is legendary.",
+        "date": "2025-10-18"
+    },
+    {
+        "id": 40,
+        "movie_id": 20,
+        "author": "Adam K.",
+        "rating": 5,
+        "text": "Intense, smart, and beautifully crafted. The best comic book movie ever.",
+        "date": "2025-10-18"
+    },
+    {
+        "id": 41,
+        "movie_id": 4,
+        "author": "Beksultan",
+        "rating": 5,
+        "text": "Very interisting and fascinating!!!",
+        "date": "2025-10-18"
+    }
+]

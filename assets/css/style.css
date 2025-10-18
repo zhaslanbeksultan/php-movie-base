@@ -1,0 +1,113 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  margin: 0;
+}
+
+header,
+footer {
+  background: #222;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav li {
+  display: inline;
+  margin: 0 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.movie-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.movie-card {
+  background: #fff;
+  padding: 10px;
+  width: 200px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.movie-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.movie-detail {
+  display: flex;
+  gap: 20px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 300px;
+}
+
+form input,
+form textarea,
+form select,
+form button {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  background: #222;
+  color: white;
+  cursor: pointer;
+}
+
+.review {
+  background: #fff;
+  padding: 10px;
+  border-radius: 6px;
+  margin: 10px 0;
+}
+
+.admin-section form {
+  margin: 15px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 400px;
+}
+
+.admin-section input,
+.admin-section textarea,
+.admin-section button {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.admin-section table {
+  background: white;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-section th {
+  background: #222;
+  color: white;
+}

@@ -1,0 +1,289 @@
+[
+  {
+    "id": 1,
+    "title": "Intouchables",
+    "description": "Released in 2011 and directed by Olivier Nakache and Éric Toledano, this French comedy-drama follows the unlikely friendship between a quadriplegic aristocrat and his lively caretaker from the projects. The film blends humor, emotion, and humanity, highlighting how two men from different worlds transform each other’s lives. With a moving score by Ludovico Einaudi, it became one of the most successful French films ever made.",
+    "genre": [
+      "drama",
+      "comedy"
+    ],
+    "year": 2011,
+    "rating": 8.8,
+    "country": "France",
+    "poster": "data:image/jpeg;base64,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"
+  },
+  {
+    "id": 2,
+    "title": "Interstellar",
+    "description": "Christopher Nolan’s 2014 epic science-fiction film explores humanity’s survival beyond Earth as astronauts travel through a wormhole to find a new home for mankind. Starring Matthew McConaughey, Anne Hathaway, and Jessica Chastain, it combines emotional storytelling with breathtaking visuals and Hans Zimmer’s iconic score. A masterpiece that examines love, time, and the limits of human endurance.",
+    "genre": [
+      "sci-fi",
+      "drama",
+      "adventure"
+    ],
+    "year": 2014,
+    "rating": 8.6,
+    "country": "USA, UK, Canada",
+    "poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0zt0lp-O3XdL8zzdrEvyzmcl6kOwfgbv4xQ&s"
+  },
+  {
+    "id": 3,
+    "title": "The Shawshank Redemption",
+    "description": "Directed by Frank Darabont and based on a Stephen King story, this 1994 American drama tells the story of Andy Dufresne, a banker wrongly imprisoned for murder, who finds hope and friendship behind bars. Through years of hardship, he plans his quiet escape and redemption. The film is celebrated for its powerful storytelling, performances, and emotional depth.",
+    "genre": [
+      "drama"
+    ],
+    "year": 1994,
+    "rating": 9.3,
+    "country": "USA",
+    "poster": "https://m.media-amazon.com/images/M/MV5BMDAyY2FhYjctNDc5OS00MDNlLThiMGUtY2UxYWVkNGY2ZjljXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+  },
+  {
+    "id": 4,
+    "title": "The Gentlemen",
+    "description": "Guy Ritchie’s 2019 crime comedy follows an American expat who runs a lucrative marijuana empire in London. When he tries to sell his business, a series of schemes, blackmail, and betrayals unfold in Ritchie’s trademark witty and stylish fashion. The film stars Matthew McConaughey, Charlie Hunnam, and Hugh Grant, combining humor with action and classy British flair.",
+    "genre": [
+      "crime",
+      "comedy",
+      "action"
+    ],
+    "year": 2019,
+    "rating": 7.8,
+    "country": "USA, UK",
+    "poster": "https://m.media-amazon.com/images/M/MV5BMzM0YzFhMTYtYjZkNS00MWRmLTg2ZDgtY2MzYjQ5ODVmOTI1XkEyXkFqcGc@._V1_.jpg"
+  },
+  {
+    "id": 5,
+    "title": "The Green Mile",
+    "description": "This 1999 drama-fantasy, directed by Frank Darabont, is set in a 1930s death row prison and follows a kind giant with mysterious healing powers. Based on Stephen King’s novel, it explores themes of justice, compassion, and miracles through the eyes of prison guard Paul Edgecomb. A deeply moving story about humanity and the supernatural.",
+    "genre": [
+      "drama",
+      "fantasy",
+      "crime"
+    ],
+    "year": 1999,
+    "rating": 9,
+    "country": "USA",
+    "poster": "https://m.media-amazon.com/images/M/MV5BMTUxMzQyNjA5MF5BMl5BanBnXkFtZTYwOTU2NTY3._V1_.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Shutter Island",
+    "description": "Martin Scorsese’s 2010 psychological thriller follows two U.S. marshals investigating a psychiatric facility on a remote island. As the mystery deepens, reality and illusion blur, revealing shocking secrets. Leonardo DiCaprio delivers a gripping performance in this dark, atmospheric exploration of guilt, trauma, and sanity.",
+    "genre": [
+      "thriller",
+      "mystery",
+      "drama"
+    ],
+    "year": 2009,
+    "rating": 8.1,
+    "country": "USA, Canada",
+    "poster": "https://m.media-amazon.com/images/M/MV5BN2FjNWExYzEtY2YzOC00YjNlLTllMTQtNmIwM2Q1YzBhOWM1XkEyXkFqcGc@._V1_.jpg"
+  },
+  {
+    "id": 7,
+    "title": "The Lord of the Rings: The Return of the King",
+    "description": "The final chapter of Peter Jackson’s legendary trilogy, this 2003 epic fantasy concludes the journey of Frodo and Aragorn in their fight against Sauron. With breathtaking battles, emotional farewells, and Howard Shore’s grand score, it won 11 Academy Awards and remains one of the greatest cinematic achievements in history.",
+    "genre": [
+      "fantasy",
+      "adventure",
+      "drama",
+      "action"
+    ],
+    "year": 2003,
+    "rating": 9,
+    "country": "New Zealand, USA",
+    "poster": "assets\/images\/TheReturnOfTheKing.webp"
+  },
+  {
+    "id": 8,
+    "title": "Forrest Gump",
+    "description": "Robert Zemeckis’s 1994 drama-comedy stars Tom Hanks as Forrest Gump, a kind-hearted man who unwittingly influences key moments in American history. Blending humor and emotion, it celebrates innocence, love, and perseverance, accompanied by an unforgettable soundtrack and heartwarming message.",
+    "genre": [
+      "drama",
+      "comedy",
+      "romance",
+      "history"
+    ],
+    "year": 1994,
+    "rating": 8.8,
+    "country": "USA",
+    "poster": "assets\/images\/ForrestGump.webp"
+  },
+  {
+    "id": 9,
+    "title": "Terminator 2: Judgment Day",
+    "description": "James Cameron’s 1991 sci-fi action masterpiece features Arnold Schwarzenegger as a reprogrammed cyborg sent to protect a boy from a new, more advanced Terminator. Combining groundbreaking visual effects, thrilling action, and emotional storytelling, it remains one of the most iconic films of all time.",
+    "genre": [
+      "sci-fi",
+      "action",
+      "thriller"
+    ],
+    "year": 1991,
+    "rating": 8.6,
+    "country": "USA, France",
+    "poster": "assets\/images\/Terminator2.webp"
+  },
+  {
+    "id": 10,
+    "title": "Green Book",
+    "description": "Inspired by a true story, Peter Farrelly’s 2018 biographical drama follows a working-class Italian-American driver and an African-American pianist on a concert tour through the 1960s Deep South. Their journey challenges racial barriers and forges an unlikely friendship that changes both their lives. Winner of the Academy Award for Best Picture.",
+    "genre": [
+      "biography",
+      "comedy",
+      "drama"
+    ],
+    "year": 2018,
+    "rating": 8.2,
+    "country": "USA, China",
+    "poster": "assets\/images\/GreenBook.webp"
+  },
+  {
+    "id": 11,
+    "title": "The Lord of the Rings: The Fellowship of the Ring",
+    "description": "The first installment of Peter Jackson’s fantasy trilogy introduces Frodo and the Fellowship as they begin their perilous quest to destroy the One Ring. With stunning visuals, memorable characters, and Howard Shore’s epic score, it set a new standard for modern fantasy cinema.",
+    "genre": [
+      "fantasy",
+      "adventure",
+      "drama",
+      "action"
+    ],
+    "year": 2001,
+    "rating": 8.8,
+    "country": "New Zealand, USA",
+    "poster": "assets\/images\/TheFellowshipOfTheRing.webp"
+  },
+  {
+    "id": 12,
+    "title": "Spirited Away",
+    "description": "Hayao Miyazaki’s 2001 animated fantasy from Japan follows a young girl who enters a mysterious spirit world after her parents are transformed into pigs. Combining Japanese folklore, imagination, and emotional storytelling, it won the Academy Award for Best Animated Feature and became a timeless masterpiece.",
+    "genre": [
+      "animation",
+      "fantasy",
+      "adventure",
+      "family"
+    ],
+    "year": 2001,
+    "rating": 8.6,
+    "country": "Japan",
+    "poster": "assets\/images\/SpiritedAway.webp"
+  },
+  {
+    "id": 13,
+    "title": "Fight Club",
+    "description": "David Fincher’s 1999 psychological thriller stars Edward Norton and Brad Pitt in a dark story about consumerism, identity, and rebellion. A disillusioned man forms an underground fight club that spirals out of control, exploring the human psyche and chaos of modern society. A cult classic known for its shocking twist and philosophical undertones.",
+    "genre": [
+      "thriller",
+      "drama",
+      "crime"
+    ],
+    "year": 1999,
+    "rating": 8.7,
+    "country": "USA, Germany",
+    "poster": "assets\/images\/FightClub.webp"
+  },
+  {
+    "id": 14,
+    "title": "Gladiator",
+    "description": "Ridley Scott’s 2000 historical epic stars Russell Crowe as Maximus, a betrayed Roman general who becomes a gladiator to avenge his family and emperor. Featuring spectacular battles, emotional depth, and Hans Zimmer’s stirring music, the film won multiple Oscars including Best Picture.",
+    "genre": [
+      "history",
+      "action",
+      "drama"
+    ],
+    "year": 2000,
+    "rating": 8.5,
+    "country": "USA, UK, Malta, Morocco",
+    "poster": "assets\/images\/Gladiator.webp"
+  },
+  {
+    "id": 15,
+    "title": "Inception",
+    "description": "Christopher Nolan’s 2010 mind-bending thriller follows a thief who steals secrets through dreams and is offered redemption by performing an impossible task — planting an idea in someone’s mind. Starring Leonardo DiCaprio, it’s a visually stunning exploration of consciousness, memory, and reality.",
+    "genre": [
+      "sci-fi",
+      "action",
+      "thriller",
+      "drama",
+      "mystery"
+    ],
+    "year": 2010,
+    "rating": 8.7,
+    "country": "USA, UK",
+    "poster": "assets\/images\/Inception.webp"
+  },
+  {
+    "id": 16,
+    "title": "Pulp Fiction",
+    "description": "Quentin Tarantino’s 1994 crime drama intertwines multiple stories of Los Angeles criminals, told with nonlinear storytelling, sharp dialogue, and dark humor. Featuring John Travolta, Samuel L. Jackson, and Uma Thurman, it redefined modern cinema and became a pop culture phenomenon.",
+    "genre": [
+      "crime",
+      "drama"
+    ],
+    "year": 1994,
+    "rating": 8.9,
+    "country": "USA",
+    "poster": "assets\/images\/Pulp Fiction.webp"
+  },
+  {
+    "id": 17,
+    "title": "Gone with the Wind",
+    "description": "Victor Fleming’s 1939 historical romance chronicles the life of Scarlett O’Hara during the American Civil War. Renowned for its grand production, sweeping love story, and iconic performances, it remains one of the most influential films in cinematic history.",
+    "genre": [
+      "romance",
+      "history",
+      "drama",
+      "war"
+    ],
+    "year": 1939,
+    "rating": 8.1,
+    "country": "USA",
+    "poster": "assets\/images\/GoneWithTheWind.webp"
+  },
+  {
+    "id": 18,
+    "title": "The Lord of the Rings: The Two Towers",
+    "description": "The second installment of Peter Jackson’s trilogy, released in 2002, continues the Fellowship’s journey as they face new battles and form unexpected alliances. With groundbreaking visual effects and emotional storytelling, it set a new standard for epic fantasy filmmaking.",
+    "genre": [
+      "fantasy",
+      "adventure",
+      "drama",
+      "action"
+    ],
+    "year": 2002,
+    "rating": 8.8,
+    "country": "New Zealand, USA",
+    "poster": "assets\/images\/The Two Towers.webp"
+  },
+  {
+    "id": 19,
+    "title": "Léon: The Professional",
+    "description": "Luc Besson’s 1994 thriller follows Léon, a professional hitman who reluctantly becomes a guardian to a young girl after her family is murdered. Set in New York, this emotionally charged story of innocence and violence is praised for its direction, acting, and unique atmosphere.",
+    "genre": [
+      "action",
+      "thriller",
+      "drama",
+      "crime"
+    ],
+    "year": 1994,
+    "rating": 8.5,
+    "country": "France, USA",
+    "poster": "assets\/images\/Leon.webp"
+  },
+  {
+    "id": 20,
+    "title": "The Dark Knight",
+    "description": "Christopher Nolan’s 2008 superhero crime thriller redefines the genre, starring Christian Bale as Batman and Heath Ledger in an Oscar-winning performance as the Joker. It’s a dark, intense exploration of chaos, morality, and heroism that transcends comic book storytelling.",
+    "genre": [
+      "sci-fi",
+      "action",
+      "thriller",
+      "crime",
+      "drama"
+    ],
+    "year": 2008,
+    "rating": 9,
+    "country": "USA, UK",
+    "poster": "assets\/images\/The Dark Knight.webp"
+  }
+]
