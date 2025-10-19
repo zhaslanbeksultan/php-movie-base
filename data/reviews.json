@@ -326,5 +326,13 @@
         "rating": 5,
         "text": "Very interisting and fascinating!!!",
         "date": "2025-10-18"
+    },
+    {
+        "id": 42,
+        "movie_id": 1,
+        "author": "Beksultan",
+        "rating": 3,
+        "text": "nice movie!",
+        "date": "2025-10-19"
     }
 ]

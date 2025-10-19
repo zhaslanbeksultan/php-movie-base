@@ -7,20 +7,35 @@ $topMovies = array_slice($movies, 0, 5);
 ?>
 
 <section class="banner">
-    <h2>Welcome to MovieBase</h2>
-    <p>Discover and review your favorite movies!</p>
+  <div class="banner-overlay">
+    <div class="banner-content">
+      <div class="logo">
+        <img src="assets/images/logo.jpg" alt="MovieBase Logo">
+        <h1>MovieBase</h1>
+      </div>
+      <p class="tagline">Your gateway to the world of cinema.</p>
+      <p class="subtext">Dive into stories that inspire, thrill, and move you — from timeless classics to the latest blockbusters.</p>
+      <a href="catalog.php" class="btn-main">Explore Movies</a>
+    </div>
+  </div>
 </section>
 
-<section class="catalog">
-    <h3>Top Movies</h3>
+
+    <section class="catalog-section">
+    <h2 class="section-title">🔥 Top Movies</h2>
     <div class="movie-grid">
         <?php foreach ($topMovies as $movie): ?>
-            <div class="movie-card">
-                <img src="<?php echo $movie['poster']; ?>" alt="<?php echo $movie['title']; ?>" width="200">
-                <h4><?php echo $movie['title']; ?></h4>
-                <p><?php echo $movie['year']; ?> | ⭐ <?php echo $movie['rating']; ?></p>
-                <a href="detail.php?id=<?php echo $movie['id']; ?>">View Details</a>
+        <div class="movie-card">
+            <div class="poster">
+            <img src="<?php echo $movie['poster']?>" alt="<?php echo htmlspecialchars($movie['title']); ?>">
             </div>
+            <div class="movie-info">
+            <h4><?php echo htmlspecialchars($movie['title']); ?></h4>
+            <p class="meta"><?php echo $movie['year']; ?> • <?php echo strtoupper($movie['country']); ?></p>
+            <p class="rating">⭐ <?php echo $movie['rating']; ?></p>
+            <a href="detail.php?id=<?php echo $movie['id']; ?>" class="btn-details">View Details</a>
+            </div>
+        </div>
         <?php endforeach; ?>
     </div>
 </section>

@@ -10,42 +10,64 @@ $movieReviews = get_reviews_by_movie($reviews, $id);
 ?>
 
 <?php if ($movie): ?>
-<div class="movie-detail">
-    <img src="../<?php echo $movie['poster']; ?>" alt="<?php echo $movie['title']; ?>">
-    <div>
-        <h2><?php echo $movie['title']; ?></h2>
-        <p><strong>Year:</strong> <?php echo $movie['year']; ?></p>
-        <p><strong>Country:</strong> <?php echo $movie['country']; ?></p>
-        <p><strong>Genres:</strong> <?php echo implode(', ', $movie['genre']); ?></p>
-        <p><strong>Rating:</strong> ⭐ <?php echo $movie['rating']; ?></p>
-        <p><?php echo $movie['description']; ?></p>
+<section class="movie-detail-section">
+  <div class="movie-detail-container">
+    <div class="movie-poster">
+      <img src="<?php echo $movie['poster']; ?>" alt="<?php echo htmlspecialchars($movie['title']); ?>">
     </div>
-</div>
-
-<hr>
-<h3>Reviews</h3>
-<?php foreach ($movieReviews as $r): ?>
-    <div class="review">
-        <p><strong><?php echo htmlspecialchars($r['author']); ?></strong> (⭐ <?php echo $r['rating']; ?>)</p>
-        <p><?php echo htmlspecialchars($r['text']); ?></p>
+    <div class="movie-content">
+      <h2 class="movie-title"><?php echo htmlspecialchars($movie['title']); ?></h2>
+      <p class="movie-meta">
+        <span><?php echo $movie['year']; ?></span> • 
+        <span><?php echo strtoupper($movie['country']); ?></span>
+      </p>
+      <div class="movie-genres">
+        <?php foreach ($movie['genre'] as $g): ?>
+          <span class="genre-tag"><?php echo ucfirst($g); ?></span>
+        <?php endforeach; ?>
+      </div>
+      <p class="movie-rating">⭐ <?php echo $movie['rating']; ?></p>
+      <p class="movie-description"><?php echo htmlspecialchars($movie['description']); ?></p>
     </div>
-<?php endforeach; ?>
+  </div>
+</section>
 
-<h3>Leave a Review</h3>
-<form method="post" action="review_form.php">
-    <input type="hidden" name="movie_id" value="<?php echo $movie['id']; ?>">
-    <input type="text" name="author" placeholder="Your name" required>
-    <select name="rating" required>
-        <option value="">Rate...</option>
-        <?php for ($i=1;$i<=5;$i++): ?>
-            <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
-        <?php endfor; ?>
-    </select>
-    <textarea name="text" placeholder="Your review" required></textarea>
-    <button type="submit">Submit</button>
-</form>
+<section class="reviews-section">
+  <h3>Audience Reviews</h3>
+
+  <?php if (empty($movieReviews)): ?>
+    <p class="no-reviews">No reviews yet. Be the first to share your thoughts!</p>
+  <?php else: ?>
+    <?php foreach ($movieReviews as $r): ?>
+      <div class="review-card">
+        <div class="review-header">
+          <strong><?php echo htmlspecialchars($r['author']); ?></strong>
+          <span class="stars">⭐ <?php echo $r['rating']; ?></span>
+        </div>
+        <p class="review-text"><?php echo htmlspecialchars($r['text']); ?></p>
+      </div>
+    <?php endforeach; ?>
+  <?php endif; ?>
+</section>
+
+<section class="review-form-section">
+  <h3>Leave a Review</h3>
+  <form method="post" action="review_form.php" class="review-form">
+      <input type="hidden" name="movie_id" value="<?php echo $movie['id']; ?>">
+      <input type="text" name="author" placeholder="Your name" required>
+      <select name="rating" required>
+          <option value="">Rate...</option>
+          <?php for ($i=1;$i<=5;$i++): ?>
+              <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+          <?php endfor; ?>
+      </select>
+      <textarea name="text" placeholder="Write your review..." required></textarea>
+      <button type="submit">Submit Review</button>
+  </form>
+</section>
+
 <?php else: ?>
-<p>Movie not found.</p>
+<p class="no-movie">Movie not found.</p>
 <?php endif; ?>
 
 <?php include '../includes/footer.php'; ?>
