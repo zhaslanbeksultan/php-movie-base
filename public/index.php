@@ -21,8 +21,8 @@ $topMovies = array_slice($movies, 0, 5);
 </section>
 
 
-    <section class="catalog-section">
-    <h2 class="section-title">🔥 Top Movies</h2>
+<section class="catalog-section">
+  <h2 class="section-title">🔥 Top Movies</h2>
     <div class="movie-grid">
         <?php foreach ($topMovies as $movie): ?>
         <div class="movie-card">

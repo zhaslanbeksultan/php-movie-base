@@ -334,5 +334,13 @@
         "rating": 3,
         "text": "nice movie!",
         "date": "2025-10-19"
+    },
+    {
+        "id": 43,
+        "movie_id": 1,
+        "author": "Beksultan",
+        "rating": 4,
+        "text": "srgwrg",
+        "date": "2025-10-21"
     }
 ]
