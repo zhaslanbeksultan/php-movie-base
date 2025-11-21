@@ -1,10 +1,9 @@
 <?php
-// like_news_service.php - Web Service v2 (POST - Accepts data and updates JSON)
+// like_news_service.php - Web Service v2 (POST - Toggle like status)
 
 header('Content-Type: application/json');
 require 'functions.php';
 
-// Only accept POST requests
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     http_response_code(405);
     echo json_encode(['error' => 'Method not allowed']);
@@ -12,7 +11,6 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 }
 
 try {
-    // Get POST data sent via fetch
     $input = json_decode(file_get_contents('php://input'), true);
     
     if (!isset($input['news_id'])) {
@@ -23,43 +21,61 @@ try {
     
     $newsId = intval($input['news_id']);
     
-    // Read current news data
-    $newsData = read_json('../data/news.json');
+    // Read current favorites data
+    $favorites = read_json('../data/favorites.json');
     
-    // Find and update the news item
-    $found = false;
+    // Initialize news_likes array if not exists
+    if (!isset($favorites['news_likes'])) {
+        $favorites['news_likes'] = [];
+    }
+    
+    // Convert newsId to string for array key
+    $newsIdStr = (string)$newsId;
+    
+    // Toggle like status
+    $isLiked = isset($favorites['news_likes'][$newsIdStr]) && $favorites['news_likes'][$newsIdStr];
+    
+    if ($isLiked) {
+        // Unlike
+        $favorites['news_likes'][$newsIdStr] = false;
+    } else {
+        // Like
+        $favorites['news_likes'][$newsIdStr] = true;
+    }
+    
+    // Save updated favorites
+    write_json('../data/favorites.json', $favorites);
+    
+    // Read news data to get current like count
+    $newsData = read_json('../data/news.json');
+    $newLikes = 0;
+    
     foreach ($newsData as &$news) {
         if ($news['id'] === $newsId) {
-            $news['likes']++;
-            $found = true;
+            if (!$isLiked) {
+                $news['likes']++;
+            } else {
+                $news['likes'] = max(0, $news['likes'] - 1);
+            }
             $newLikes = $news['likes'];
             break;
         }
     }
     
-    if (!$found) {
-        http_response_code(404);
-        echo json_encode(['error' => 'News not found']);
-        exit;
-    }
-    
-    // Save updated data back to JSON
     write_json('../data/news.json', $newsData);
     
-    // Return success response with updated like count
     echo json_encode([
         'success' => true,
-        'message' => 'News liked successfully',
-        'news_id' => $newsId,
-        'likes' => $newLikes
+        'is_liked' => !$isLiked,
+        'likes' => $newLikes,
+        'news_id' => $newsId
     ]);
     
 } catch (Exception $e) {
     http_response_code(500);
     echo json_encode([
         'success' => false,
-        'error' => 'Failed to like news',
-        'message' => $e->getMessage()
+        'error' => $e->getMessage()
     ]);
 }
 ?>

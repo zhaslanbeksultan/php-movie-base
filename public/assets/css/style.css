@@ -6,7 +6,10 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.6;
+  transition: all 0.3s ease;
 }
+
+
 
 header,
 footer {
@@ -120,6 +123,51 @@ nav a.active {
   flex-direction: column;
   align-items: center;
   gap: 15px;
+}
+
+.tagline {
+  font-size: 1.3em;
+  font-weight: 500;
+  color: #fff;
+  margin-top: 10px;
+}
+
+.subtext {
+  font-size: 1.1em;
+  color: #ddd;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.btn-main {
+  margin-top: 25px;
+  background: #ffcc00;
+  color: #000;
+  text-decoration: none;
+  padding: 14px 30px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1.1em;
+  transition: all 0.3s;
+  box-shadow: 0 0 15px rgba(255, 204, 0, 0.4);
+}
+
+.btn-main:hover {
+  background: #ffaa00;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 204, 0, 0.6);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Logo + Title */
@@ -405,6 +453,227 @@ nav a.active {
 
 .btn-overlay:hover {
   background: #ffaa00;
+}
+
+/* ==== Movie Poster with Favorite Icon ==== */
+#movie-poster-container {
+  position: relative;
+  cursor: pointer;
+}
+
+#movie-poster {
+  transition: transform 0.3s ease;
+}
+
+.favorite-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 3em;
+  color: #ffd700;
+  text-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+  animation: float s ease-in-out infinite;
+  z-index: 10;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* ==== Interactive Controls ==== */
+.interactive-controls {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.pimpin-btn {
+  background: #ffcc00;
+  border: none;
+  color: #000;
+  font-weight: bold;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.pimpin-btn:hover {
+  background: #ffaa00;
+  transform: scale(1.05);
+}
+
+.bling-control {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #ffcc00;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.bling-control input[type="checkbox"] {
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+}
+
+/* ==== Like Button States ==== */
+.like-btn {
+  background: #2a2a2a;
+  border: 2px solid #ffcc00;
+  color: #ffcc00;
+  font-size: 1.2em;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.like-btn:hover {
+  background: #ffcc00;
+  color: #0f0f0f;
+  transform: scale(1.05);
+}
+
+.like-btn.liked {
+  background: #ffcc00;
+  color: #0f0f0f;
+  border-color: #ff0000;
+}
+
+.like-btn.liking {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+/* ==== Comments Section ==== */
+.comments-section {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #1b1b1b;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.comments-section h3 {
+  color: #ffcc00;
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 1.8em;
+}
+
+.comments-list {
+  margin-bottom: 30px;
+}
+
+.comment-card {
+  background: #2a2a2a;
+  border-radius: 8px;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.comment-card:hover {
+  transform: translateX(5px);
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.comment-header strong {
+  color: #ffcc00;
+  font-size: 1.1em;
+}
+
+.comment-date {
+  color: #888;
+  font-size: 0.9em;
+}
+
+.comment-text {
+  color: #ddd;
+  line-height: 1.6;
+}
+
+.no-comments {
+  text-align: center;
+  color: #aaa;
+  font-style: italic;
+  padding: 20px;
+}
+
+/* ==== Comment Form ==== */
+.comment-form-section {
+  background: #2a2a2a;
+  padding: 25px;
+  border-radius: 8px;
+}
+
+.comment-form-section h4 {
+  color: #ffcc00;
+  margin-bottom: 15px;
+}
+
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.comment-form input,
+.comment-form textarea {
+  background: #1b1b1b;
+  border: 1px solid #444;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-size: 1em;
+  transition: border 0.3s;
+}
+
+.comment-form input:focus,
+.comment-form textarea:focus {
+  border-color: #ffcc00;
+  outline: none;
+  box-shadow: 0 0 8px rgba(255, 204, 0, 0.3);
+}
+
+.comment-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.comment-form button {
+  background: #ffcc00;
+  color: #000;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.comment-form button:hover {
+  background: #ffaa00;
+  transform: scale(1.02);
 }
 
 /* ==== Genre Tags ==== */

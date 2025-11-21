@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "news_id": 1,
+        "author": "wef",
+        "text": "wef",
+        "date": "2025-11-21 22:26:25"
+    },
+    {
+        "id": 2,
+        "news_id": 1,
+        "author": "wefw",
+        "text": "wefw",
+        "date": "2025-11-21 22:33:44"
+    }
+]

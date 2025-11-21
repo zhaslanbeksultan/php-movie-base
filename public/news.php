@@ -5,15 +5,6 @@
         <h2 class="section-title">🎬 Cinema News</h2>
         <p class="news-subtitle">Stay updated with the latest from the world of movies</p>
         
-        <!-- Interactive UI Elements for ENDTERM -->
-        <div class="interactive-controls">
-            <button id="pimpin-btn" class="pimpin-btn">Make Me Bigger! 🚀</button>
-            <label class="bling-control">
-                <input type="checkbox" id="bling-checkbox">
-                <span>✨ Snoopify (Bling Mode)</span>
-            </label>
-        </div>
-        
         <!-- Search functionality -->
         <div class="search-bar">
             <input type="text" id="news-search" placeholder="🔍 Search news... (Press Enter)">

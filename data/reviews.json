@@ -342,5 +342,21 @@
         "rating": 4,
         "text": "srgwrg",
         "date": "2025-10-21"
+    },
+    {
+        "id": 44,
+        "movie_id": 3,
+        "author": "e",
+        "rating": 3,
+        "text": "wfwe",
+        "date": "2025-11-20"
+    },
+    {
+        "id": 45,
+        "movie_id": 2,
+        "author": "e",
+        "rating": 4,
+        "text": "f",
+        "date": "2025-11-21"
     }
 ]

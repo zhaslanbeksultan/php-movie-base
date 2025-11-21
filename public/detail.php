@@ -12,8 +12,9 @@ $movieReviews = get_reviews_by_movie($reviews, $id);
 <?php if ($movie): ?>
 <section class="movie-detail-section">
   <div class="movie-detail-container">
-    <div class="movie-poster">
-      <img src="<?php echo $movie['poster']; ?>" alt="<?php echo htmlspecialchars($movie['title']); ?>">
+    <div class="movie-poster" id="movie-poster-container">
+      <img id="movie-poster" src="<?php echo $movie['poster']; ?>" alt="<?php echo htmlspecialchars($movie['title']); ?>" data-movie-id="<?php echo $movie['id']; ?>">
+      <div class="favorite-icon" id="favorite-icon" style="display: none;">⭐</div>
     </div>
     <div class="movie-content">
       <h2 class="movie-title"><?php echo htmlspecialchars($movie['title']); ?></h2>
@@ -65,6 +66,12 @@ $movieReviews = get_reviews_by_movie($reviews, $id);
       <button type="submit">Submit Review</button>
   </form>
 </section>
+
+<!-- Load JavaScript modules -->
+<script src="../assets/js/data.js"></script>
+<script src="../assets/js/ui.js"></script>
+<script src="../assets/js/events.js"></script>
+<script src="../assets/js/movie-detail.js"></script>
 
 <?php else: ?>
 <p class="no-movie">Movie not found.</p>
