@@ -73,16 +73,31 @@ const EventsModule = (() => {
   // Event 5: Keydown - Search functionality
   const setupNewsFilter = () => {
     const searchInput = document.getElementById('news-search');
+    const searchBtn = document.getElementById('news-search-btn');
+
     if (!searchInput) return;
 
+    // ENTER key search
     searchInput.addEventListener('keydown', (e) => {
       if (e.key === 'Enter') {
         e.preventDefault();
-        const searchTerm = searchInput.value.toLowerCase();
-        filterNewsCards(searchTerm);
-        showNewsNotification("News found!", "success");
+        runSearch();
       }
     });
+
+    // BUTTON click search
+    if (searchBtn) {
+      searchBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        runSearch();
+      });
+    }
+
+    function runSearch() {
+      const searchTerm = searchInput.value.trim().toLowerCase();
+      filterNewsCards(searchTerm);
+      showNewsNotification("News found!", "success");
+    }
   };
 
   // Filter news cards based on search

@@ -1,16 +1,65 @@
 [
     {
         "id": 1,
-        "news_id": 1,
-        "author": "wef",
-        "text": "wef",
-        "date": "2025-11-21 22:26:25"
+        "news_id": 6,
+        "author": "fwefwff",
+        "text": "f",
+        "date": "2025-11-22 10:44:52"
     },
     {
         "id": 2,
-        "news_id": 1,
-        "author": "wefw",
-        "text": "wefw",
-        "date": "2025-11-21 22:33:44"
+        "news_id": 6,
+        "author": "fwefwff",
+        "text": "f",
+        "date": "2025-11-22 10:44:55"
+    },
+    {
+        "id": 3,
+        "news_id": 6,
+        "author": "fewf",
+        "text": "wfwe",
+        "date": "2025-11-22 10:44:59"
+    },
+    {
+        "id": 4,
+        "news_id": 6,
+        "author": "wef",
+        "text": "wfe",
+        "date": "2025-11-22 10:45:04"
+    },
+    {
+        "id": 5,
+        "news_id": 5,
+        "author": "deadpool",
+        "text": "kill la kill",
+        "date": "2025-11-22 14:29:36"
+    },
+    {
+        "id": 6,
+        "news_id": 5,
+        "author": "oop",
+        "text": "smth",
+        "date": "2025-11-22 14:29:48"
+    },
+    {
+        "id": 7,
+        "news_id": 5,
+        "author": "wef",
+        "text": "wef",
+        "date": "2025-11-22 14:29:57"
+    },
+    {
+        "id": 8,
+        "news_id": 5,
+        "author": "f",
+        "text": "f",
+        "date": "2025-11-22 14:30:42"
+    },
+    {
+        "id": 9,
+        "news_id": 5,
+        "author": "f",
+        "text": "f",
+        "date": "2025-11-22 14:31:01"
     }
 ]

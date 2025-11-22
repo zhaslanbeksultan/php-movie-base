@@ -30,6 +30,8 @@
 </section>
 
 <!-- Load JavaScript modules -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/scriptaculous/1.9.0/scriptaculous.js"></script>
+
 <script src="../assets/js/data.js"></script>
 <script src="../assets/js/ui.js"></script>
 <script src="../assets/js/events.js"></script>

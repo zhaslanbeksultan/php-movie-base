@@ -358,5 +358,29 @@
         "rating": 4,
         "text": "f",
         "date": "2025-11-21"
+    },
+    {
+        "id": 46,
+        "movie_id": 2,
+        "author": "wefwef",
+        "rating": 1,
+        "text": "wef",
+        "date": "2025-11-21"
+    },
+    {
+        "id": 47,
+        "movie_id": 2,
+        "author": "e",
+        "rating": 4,
+        "text": "efw",
+        "date": "2025-11-21"
+    },
+    {
+        "id": 48,
+        "movie_id": 3,
+        "author": "ef",
+        "rating": 2,
+        "text": "qef",
+        "date": "2025-11-22"
     }
 ]

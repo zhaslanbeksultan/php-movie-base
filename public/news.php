@@ -3,11 +3,11 @@
 <section class="news-page">
     <div class="news-header">
         <h2 class="section-title">🎬 Cinema News</h2>
-        <p class="news-subtitle">Stay updated with the latest from the world of movies</p>
         
         <!-- Search functionality -->
-        <div class="search-bar">
+        <div class="search-form">
             <input type="text" id="news-search" placeholder="🔍 Search news... (Press Enter)">
+            <button type="submit" id="news-search-btn">Search</button>
         </div>
     </div>
 

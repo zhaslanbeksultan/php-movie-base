@@ -1,12 +1,66 @@
 <?php
-function read_json($path) {
-    if (!file_exists($path)) return [];
-    $data = file_get_contents($path);
-    return json_decode($data, true) ?? [];
+function read_json($filepath) {
+    if (!file_exists($filepath)) {
+        throw new Exception("File not found: {$filepath}");
+    }
+    
+    $content = file_get_contents($filepath);
+    
+    if ($content === false) {
+        throw new Exception("Failed to read file: {$filepath}");
+    }
+    
+    $data = json_decode($content, true);
+    
+    if ($data === null && json_last_error() !== JSON_ERROR_NONE) {
+        throw new Exception("JSON decode error in {$filepath}: " . json_last_error_msg());
+    }
+    
+    return $data;
 }
 
-function write_json($path, $data) {
-    file_put_contents($path, json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
+function write_json($filepath, $data) {
+    // Encode with pretty print for readability
+    $json = json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+    
+    if ($json === false) {
+        throw new Exception("JSON encode error: " . json_last_error_msg());
+    }
+    
+    // Write to file
+    $result = file_put_contents($filepath, $json);
+    
+    if ($result === false) {
+        throw new Exception("Failed to write to file: {$filepath}. Check permissions!");
+    }
+    
+    // Verify the write was successful
+    if (!file_exists($filepath)) {
+        throw new Exception("File was not created: {$filepath}");
+    }
+    
+    return true;
+}
+
+/**
+ * Check if file is writable
+ */
+function check_writable($filepath) {
+    if (!file_exists($filepath)) {
+        $dir = dirname($filepath);
+        return is_writable($dir);
+    }
+    return is_writable($filepath);
+}
+
+/**
+ * Get file permissions in readable format
+ */
+function get_file_permissions($filepath) {
+    if (!file_exists($filepath)) {
+        return 'File does not exist';
+    }
+    return substr(sprintf('%o', fileperms($filepath)), -4);
 }
 
 function get_movie_by_id($movies, $id) {

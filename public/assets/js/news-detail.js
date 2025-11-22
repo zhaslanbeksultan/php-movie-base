@@ -87,37 +87,87 @@
     await loadComments(newsId);
 
     // Setup like button event with toggle functionality
+    // IMPORTANT: Track if request is in progress to prevent double-clicking
+    let isProcessing = false;
+
     likeBtn.addEventListener('click', async (e) => {
       e.preventDefault();
+      e.stopPropagation(); // Prevent event bubbling
 
+      // Prevent double clicks
+      if (isProcessing || likeBtn.disabled) {
+        console.log('Request already in progress, ignoring click');
+        return;
+      }
+
+      isProcessing = true;
       likeBtn.disabled = true;
       likeBtn.classList.add('liking');
 
-      const result = await DataModule.likeNews(newsId);
+      try {
+        const result = await DataModule.likeNews(newsId);
 
-      if (result.success) {
-        // Update button appearance
-        likeBtn.classList.toggle('liked');
-        likeBtn.innerHTML = `${result.is_liked ? '❤️' : '🤍'} ${result.likes}`;
-        likeText.textContent = result.is_liked ? 'You liked this' : 'Like this article';
+        if (result.success) {
+          // Update button appearance
+          likeBtn.classList.toggle('liked');
+          likeBtn.innerHTML = `${result.is_liked ? '❤️' : '🤍'} ${result.likes}`;
+          likeText.textContent = result.is_liked ? 'You liked this' : 'Like this article';
 
-        // Apply Scriptaculous effect
-        if (result.is_liked) {
-          new Effect.Pulsate(likeBtn, { pulses: 2, duration: 0.8 });
-          UIModule.showNotification('❤️ Liked!', 'success');
+          // Apply Scriptaculous effects
+          if (result.is_liked) {
+            // Liked animation - pulsate and scale up
+            new Effect.Pulsate(likeBtn, {
+              pulses: 2,
+              duration: 0.8,
+              afterFinish: () => {
+                new Effect.Scale(likeBtn, 110, {
+                  duration: 0.3,
+                  scaleMode: 'contents',
+                  afterFinish: () => {
+                    new Effect.Scale(likeBtn, 91, {
+                      duration: 0.3,
+                      scaleMode: 'contents'
+                    });
+                  }
+                });
+              }
+            });
+            UIModule.showNotification('❤️ Liked!', 'success');
+          } else {
+            // Unliked animation - shake and fade effect
+            new Effect.Shake(likeBtn, {
+              duration: 0.5,
+              distance: 5
+            });
+            new Effect.Opacity(likeBtn, {
+              from: 1.0,
+              to: 0.5,
+              duration: 0.3,
+              afterFinish: () => {
+                new Effect.Opacity(likeBtn, {
+                  from: 0.5,
+                  to: 1.0,
+                  duration: 0.3
+                });
+              }
+            });
+            UIModule.showNotification('Like removed', 'info');
+          }
         } else {
-          UIModule.showNotification('Like removed', 'info');
+          UIModule.showNotification('Failed to update like', 'error');
         }
-      } else {
-        UIModule.showNotification('Failed to update like', 'error');
+      } catch (error) {
+        console.error('Error in like handler:', error);
+        UIModule.showNotification('Error updating like', 'error');
+      } finally {
+        // Re-enable button after animation completes
+        setTimeout(() => {
+          likeBtn.disabled = false;
+          likeBtn.classList.remove('liking');
+          isProcessing = false;
+        }, 1000); // Wait 1 second to prevent rapid clicking
       }
-
-      likeBtn.disabled = false;
-      likeBtn.classList.remove('liking');
     });
-
-    // Apply fade-in effect to content
-    new Effect.Appear(content, { duration: 0.8 });
 
   } catch (error) {
     console.error('Error loading news detail:', error);
@@ -142,6 +192,7 @@ async function loadComments(newsId) {
     comments.forEach((comment, index) => {
       const commentCard = document.createElement('div');
       commentCard.className = 'comment-card';
+      commentCard.style.opacity = '0';
       commentCard.innerHTML = `
         <div class="comment-header">
           <strong>${comment.author}</strong>
@@ -151,8 +202,10 @@ async function loadComments(newsId) {
       `;
       commentsList.appendChild(commentCard);
 
-      // Apply slide-in effect
-      new Effect.SlideDown(commentCard, { duration: 0.5, delay: index * 0.1 });
+      // Staggered appear effect
+      setTimeout(() => {
+        new Effect.Appear(commentCard, { duration: 0.5 });
+      }, index * 100);
     });
 
   } catch (error) {
@@ -191,8 +244,45 @@ document.getElementById('comment-form').addEventListener('submit', async (e) => 
       document.getElementById('comment-author').value = '';
       document.getElementById('comment-text').value = '';
 
-      // Reload comments
-      await loadComments(formData.news_id);
+      // Add new comment with animation
+      const commentsList = document.getElementById('comments-list');
+
+      // Remove "no comments" message if exists
+      const noComments = commentsList.querySelector('.no-comments');
+      if (noComments) {
+        new Effect.Fade(noComments, {
+          duration: 0.3,
+          afterFinish: () => noComments.remove()
+        });
+      }
+
+      // Create new comment element
+      const newComment = document.createElement('div');
+      newComment.className = 'comment-card new-comment';
+      newComment.style.opacity = '0';
+      newComment.innerHTML = `
+        <div class="comment-header">
+          <strong>${result.comment.author}</strong>
+          <span class="comment-date">${UIModule.formatDate(result.comment.date)}</span>
+        </div>
+        <p class="comment-text">${result.comment.text}</p>
+      `;
+
+      // Insert at the top (newest first)
+      commentsList.insertBefore(newComment, commentsList.firstChild);
+
+      // Apply combined animation effects
+      new Effect.Appear(newComment, {
+        duration: 0.6,
+        afterFinish: () => {
+          new Effect.Highlight(newComment, {
+            duration: 1.5,
+            startcolor: '#ffcc00',
+            endcolor: '#1a1a1a'
+          });
+        }
+      });
+
     } else {
       UIModule.showNotification('Failed to post comment', 'error');
     }
