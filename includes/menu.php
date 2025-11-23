@@ -9,5 +9,11 @@ $current = basename($_SERVER['PHP_SELF']);
         <li><a href="favorites.php" class="<?= $current === 'favorites.php' ? 'active' : '' ?>">Favorites</a></li>
         <li><a href="news.php" class="<?= $current === 'news.php' ? 'active' : '' ?>">News</a></li>
         <li><a href="admin.php" class="<?= $current === 'admin.php' ? 'active' : '' ?>">Admin</a></li>
+                <li>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                <span class="sun-icon">☀️</span>
+                <span class="moon-icon">🌙</span>
+            </button>
+        </li>
     </ul>
 </nav>

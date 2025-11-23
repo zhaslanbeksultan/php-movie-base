@@ -61,5 +61,26 @@
         "author": "f",
         "text": "f",
         "date": "2025-11-22 14:31:01"
+    },
+    {
+        "id": 10,
+        "news_id": 1,
+        "author": "wrv",
+        "text": "wrv",
+        "date": "2025-11-23 16:01:35"
+    },
+    {
+        "id": 11,
+        "news_id": 1,
+        "author": "ef",
+        "text": "efwe",
+        "date": "2025-11-23 16:01:43"
+    },
+    {
+        "id": 12,
+        "news_id": 1,
+        "author": "wqef",
+        "text": "qfe",
+        "date": "2025-11-23 16:01:51"
     }
 ]
