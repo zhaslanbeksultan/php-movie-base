@@ -38,7 +38,6 @@
       <h1 class="news-detail-title">${news.title}</h1>
       <div class="news-detail-meta">
         <span class="news-date">📅 ${UIModule.formatDate(news.date)}</span>
-        <span class="news-category">📂 ${news.category.toUpperCase()}</span>
       </div>
     `;
 

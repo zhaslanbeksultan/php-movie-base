@@ -4,7 +4,6 @@
         "title": "Christopher Nolan's Next Film Announced",
         "description": "Oscar-winning director Christopher Nolan has announced his next ambitious project, a biographical thriller about J. Robert Oppenheimer. The film promises to explore the complex life of the physicist who led the Manhattan Project. With an all-star cast and IMAX filming, this is set to be one of the most anticipated releases of the year.",
         "image": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=800",
-        "category": "latest",
         "date": "2025-11-18",
         "likes": 358,
         "is_liked": true
@@ -14,7 +13,6 @@
         "title": "Studio Ghibli Opens New Theme Park",
         "description": "Studio Ghibli has officially opened its magical theme park in Japan, bringing beloved animated worlds to life. Visitors can now explore recreations of iconic locations from films like Spirited Away, My Neighbor Totoro, and Howl's Moving Castle. The park features immersive experiences, authentic Japanese architecture, and exclusive merchandise that celebrates the studio's 40-year legacy.",
         "image": "https://images.unsplash.com/photo-1518676590629-3dcbd9c5a5c9?w=800",
-        "category": "popular",
         "date": "2025-11-15",
         "likes": 905,
         "is_liked": false
@@ -24,7 +22,6 @@
         "title": "Martin Scorsese Receives Lifetime Achievement Award",
         "description": "Legendary filmmaker Martin Scorsese was honored with a Lifetime Achievement Award at this year's Film Festival. The 81-year-old director, known for masterpieces like Goodfellas, Taxi Driver, and The Departed, gave an emotional speech about the future of cinema and the importance of film preservation. His career spans over five decades with numerous critical and commercial successes.",
         "image": "https://images.unsplash.com/photo-1574267432644-f610a98f9341?w=800",
-        "category": "latest",
         "date": "2025-11-17",
         "likes": 568,
         "is_liked": true
@@ -34,7 +31,6 @@
         "title": "Oscars 2026: Record Number of International Nominations",
         "description": "The Academy Awards has announced a record-breaking number of international film nominations for 2026. Films from South Korea, France, Japan, and Mexico are leading the pack, showcasing the global evolution of cinema. This historic shift reflects the Academy's commitment to recognizing diverse storytelling and represents a major milestone in film industry inclusivity.",
         "image": "https://images.unsplash.com/photo-1585647347384-2593bc35786b?w=800",
-        "category": "popular",
         "date": "2025-11-16",
         "likes": 727,
         "is_liked": false
@@ -44,7 +40,6 @@
         "title": "Marvel Announces Phase 6 Lineup",
         "description": "Marvel Studios has unveiled its complete Phase 6 slate at a special fan event, featuring new Avengers films, surprising character returns, and crossovers that will reshape the MCU. The announcement includes release dates through 2027 and teases the introduction of the X-Men and Fantastic Four into the main universe. Fans are buzzing with excitement about the future of the franchise.",
         "image": "https://images.unsplash.com/photo-1608889476561-6242cfdbf622?w=800",
-        "category": "latest",
         "date": "2025-11-19",
         "likes": 1248,
         "is_liked": true
@@ -54,7 +49,6 @@
         "title": "Classic Film Restoration: Gone with the Wind in 8K",
         "description": "A stunning 8K restoration of the 1939 classic Gone with the Wind has been completed after three years of painstaking work. The restoration team used AI-enhanced technology and original film elements to bring new life to this cinematic masterpiece. The restored version will premiere at select IMAX theaters before its digital release, offering audiences an unprecedented viewing experience.",
         "image": "https://images.unsplash.com/photo-1594908900066-3f47337549d8?w=800",
-        "category": "popular",
         "date": "2025-11-14",
         "likes": 456,
         "is_liked": false

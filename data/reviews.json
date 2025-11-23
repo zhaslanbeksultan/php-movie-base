@@ -382,5 +382,13 @@
         "rating": 2,
         "text": "qef",
         "date": "2025-11-22"
+    },
+    {
+        "id": 49,
+        "movie_id": 12,
+        "author": "beks",
+        "rating": 5,
+        "text": "cool",
+        "date": "2025-11-23"
     }
 ]

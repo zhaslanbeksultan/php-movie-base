@@ -59,7 +59,7 @@
 
               // Apply Scriptaculous effect
               new Effect.Appear(favoriteIcon, { duration: 0.5 });
-              new Effect.Pulsate(favoriteIcon, { pulses: 3, duration: 1.5 });
+              new Effect.Pulsate(favoriteIcon, { pulses: 10, duration: 1.5 });
 
               UIModule.showNotification('✨ Added to favorites!', 'success');
             } else {

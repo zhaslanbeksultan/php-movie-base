@@ -14,7 +14,7 @@ $movieReviews = get_reviews_by_movie($reviews, $id);
   <div class="movie-detail-container">
     <div class="movie-poster" id="movie-poster-container">
       <img id="movie-poster" src="<?php echo $movie['poster']; ?>" alt="<?php echo htmlspecialchars($movie['title']); ?>" data-movie-id="<?php echo $movie['id']; ?>">
-      <div class="favorite-icon" id="favorite-icon" style="display: none;">⭐</div>
+      <div class="favorite-badge" id="favorite-badge">⭐</div>
     </div>
     <div class="movie-content">
       <h2 class="movie-title"><?php echo htmlspecialchars($movie['title']); ?></h2>

@@ -19,7 +19,6 @@ const FavoritesModule = (() => {
         const movieId = parseInt(e.target.getAttribute('data-movie-id'));
         const movieCard = e.target.closest('.movie-card');
 
-        if (!confirm('Remove this movie from favorites?')) return;
 
         try {
           const response = await fetch('toggle_favorite.php', {

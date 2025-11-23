@@ -14,16 +14,20 @@
     <!-- Latest News Section -->
     <div class="news-section">
         <h3 class="category-title">⚡ Latest News</h3>
-        <div id="latest-news" class="news-grid">
-            <!-- Will be populated by JavaScript -->
+        <div class="fade-wrapper">
+            <div id="latest-news" class="news-grid scroll-section">
+                <!-- Will be populated by JavaScript -->
+            </div>
         </div>
     </div>
 
     <!-- Popular News Section -->
     <div class="news-section">
         <h3 class="category-title">🔥 Popular News</h3>
-        <div id="popular-news" class="news-grid">
-            <!-- Will be populated by JavaScript -->
+        <div class="fade-wrapper">
+            <div id="popular-news" class="news-grid scroll-section">
+                <!-- Will be populated by JavaScript -->
+            </div>
         </div>
     </div>
 </section>

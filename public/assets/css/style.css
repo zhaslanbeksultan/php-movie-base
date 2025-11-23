@@ -1198,38 +1198,6 @@ footer {
   margin-bottom: 25px;
 }
 
-/* ==== Interactive Controls ==== */
-.interactive-controls {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-bottom: 20px;
-}
-
-.pimpin-btn {
-  background: #ffcc00;
-  border: none;
-  color: #000;
-  font-weight: bold;
-  padding: 10px 18px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.pimpin-btn:hover {
-  background: #ffaa00;
-  transform: scale(1.05);
-}
-
-.bling-control {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  color: #ffcc00;
-  font-weight: bold;
-}
-
 /* ==== Search Bar (matching catalog inputs) ==== */
 .search-bar {
   display: flex;
@@ -1265,23 +1233,34 @@ footer {
   text-shadow: 0 0 8px rgba(255, 204, 0, 0.3);
 }
 
-/* ==== News Grid (same as movie grid) ==== */
+/* ==== News Grid  ==== */
 .news-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  display: flex;
   gap: 25px;
-  justify-content: center;
-  align-items: stretch;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+
+  /* hide scrollbar */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.news-grid::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari */
 }
 
 /* ==== News Card ==== */
 .news-card {
+  flex: 0 0 360px;
   background: #1b1b1b;
-  border-radius: 12px;
+  border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s, box-shadow 0.3s;
   cursor: pointer;
+  pointer-events: auto;
 }
 
 .news-card:hover {
@@ -1292,7 +1271,7 @@ footer {
 /* ==== Image + Overlay ==== */
 .news-image {
   position: relative;
-  height: 220px;
+  height: 280px;
   background-size: cover;
   background-position: center;
   border-bottom: 1px solid #333;
@@ -1317,6 +1296,49 @@ footer {
 
 .news-card:hover .news-overlay {
   opacity: 1;
+}
+
+/* Wrapper for fade overlay */
+.fade-wrapper {
+  position: relative;
+  /* overflow: hidden; */
+}
+
+.fade-wrapper::before,
+.fade-wrapper::after {
+  pointer-events: none;
+}
+
+.news-grid.dragging {
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
+  user-select: none;
+}
+
+/* Fade gradient left */
+.fade-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100%;
+  pointer-events: none;
+  background: linear-gradient(to right, #0f0f0f, transparent);
+  z-index: 10;
+}
+
+/* Fade gradient right */
+.fade-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100%;
+  pointer-events: none;
+  background: linear-gradient(to left, #0f0f0f, transparent);
+  z-index: 10;
 }
 
 /* ==== Text Info ==== */

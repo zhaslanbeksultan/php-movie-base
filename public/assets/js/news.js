@@ -14,12 +14,11 @@
       return;
     }
 
-    // Filter news by categories using arrow functions and filter method
-    const latestNews = DataModule.filterByCategory(allNews, 'latest');
-    const popularNews = DataModule.filterByCategory(allNews, 'popular');
+    // Sort by date (latest → oldest)
+    const latestNews = [...allNews].sort((a, b) => new Date(b.date) - new Date(a.date));
 
-    // Sort popular news by likes
-    const sortedPopular = DataModule.sortByLikes(popularNews);
+    // Sort by likes (most → least)
+    const popularNews = [...allNews].sort((a, b) => b.likes - a.likes);
 
     // Hide loading spinners
     UIModule.hideLoading('latest-news');
@@ -27,7 +26,7 @@
 
     // Render news lists
     UIModule.renderNewsList(latestNews, 'latest-news');
-    UIModule.renderNewsList(sortedPopular, 'popular-news');
+    UIModule.renderNewsList(popularNews, 'popular-news');
 
     // Log statistics using array methods
     console.log('Total news:', allNews.length);
@@ -37,6 +36,63 @@
 
     // Add hover effects after rendering
     EventsModule.setupNewsHover();
+
+    // Enable horizontal scroll with vertical mouse wheel
+    function enableHorizontalScroll(id) {
+      const el = document.getElementById(id);
+
+      /* === 1. Wheel Scroll (smooth for touchpad) === */
+      el.addEventListener("wheel", (e) => {
+        if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) return;
+        e.preventDefault();
+        el.scrollLeft += e.deltaY * 1.2;
+      }, { passive: false });
+
+      /* === 2. Drag to Scroll === */
+      let isDown = false;
+      let startX;
+      let scrollLeft;
+      let moved = false; // to prevent click after drag
+
+      el.addEventListener("mousedown", (e) => {
+        isDown = true;
+        moved = false;
+        el.classList.add("dragging");
+        startX = e.pageX;
+        scrollLeft = el.scrollLeft;
+      });
+
+      el.addEventListener("mouseleave", () => {
+        isDown = false;
+        el.classList.remove("dragging");
+      });
+
+      el.addEventListener("mouseup", () => {
+        isDown = false;
+        el.classList.remove("dragging");
+      });
+
+      el.addEventListener("mousemove", (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        moved = true;
+
+        const walk = (e.pageX - startX) * 1.2; // smoother drag
+        el.scrollLeft = scrollLeft - walk;
+      });
+
+      /* === 3. Disable clicking a news card after drag === */
+      el.querySelectorAll('.news-card').forEach(card => {
+        card.addEventListener("click", (e) => {
+          if (moved) e.preventDefault();
+        });
+      });
+    }
+
+
+    enableHorizontalScroll('latest-news');
+    enableHorizontalScroll('popular-news');
+
 
   } catch (error) {
     console.error('Error loading news:', error);
