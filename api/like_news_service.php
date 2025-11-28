@@ -2,7 +2,7 @@
 // like_news_service.php - Web Service v2 (POST - Toggle like status)
 
 header('Content-Type: application/json');
-require 'functions.php';
+require '../public/functions.php';
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     http_response_code(405);

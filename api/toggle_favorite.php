@@ -2,7 +2,7 @@
 // toggle_favorite.php - Web Service for toggling favorites
 
 header('Content-Type: application/json');
-require 'functions.php';
+require '../public/functions.php';
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     http_response_code(405);

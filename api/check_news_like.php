@@ -2,7 +2,7 @@
 // check_news_like.php - Check if user has liked a news article
 
 header('Content-Type: application/json');
-require 'functions.php';
+require '../public/functions.php';
 
 try {
     $newsId = intval($_GET['news_id'] ?? 0);

@@ -2,7 +2,7 @@
 // add_news_comment.php - Web Service to add a comment to news article
 
 header('Content-Type: application/json');
-require 'functions.php';
+require '../public/functions.php;
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     http_response_code(405);
