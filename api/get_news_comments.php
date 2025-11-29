@@ -2,7 +2,7 @@
 // get_news_comments.php - Web Service to get comments for a news article
 
 header('Content-Type: application/json');
-require 'functions.php';
+require '../public/functions.php';
 
 try {
     $newsId = intval($_GET['news_id'] ?? 0);
