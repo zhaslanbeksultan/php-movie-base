@@ -2,7 +2,7 @@
 // toggle_favorite.php - Web Service for toggling favorites
 
 header('Content-Type: application/json');
-require '../public/functions.php';
+require '../functions.php';
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     http_response_code(405);
@@ -22,7 +22,7 @@ try {
     $movieId = intval($input['movie_id']);
     
     // Read favorites data
-    $favorites = read_json('../data/favorites.json');
+    $favorites = read_json('../../data/favorites.json');
     
     // Check if movie is already in favorites
     $index = array_search($movieId, $favorites['movies']);
@@ -38,7 +38,7 @@ try {
     }
     
     // Save updated favorites
-    write_json('../data/favorites.json', $favorites);
+    write_json('../../data/favorites.json', $favorites);
     
     echo json_encode([
         'success' => true,

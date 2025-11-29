@@ -2,7 +2,7 @@
 // add_news_comment.php - Web Service to add a comment to news article
 
 header('Content-Type: application/json');
-require '../public/functions.php;
+require '../functions.php';
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     http_response_code(405);
@@ -30,7 +30,7 @@ try {
     }
     
     // Read existing comments
-    $comments = read_json('../data/news_comments.json');
+    $comments = read_json('../../data/news_comments.json');
     
     // Create new comment
     $newComment = [
@@ -45,7 +45,7 @@ try {
     $comments[] = $newComment;
     
     // Save to file
-    write_json('../data/news_comments.json', $comments);
+    write_json('../../data/news_comments.json', $comments);
     
     echo json_encode([
         'success' => true,

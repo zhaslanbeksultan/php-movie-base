@@ -32,8 +32,8 @@
         "description": "The Academy Awards has announced a record-breaking number of international film nominations for 2026. Films from South Korea, France, Japan, and Mexico are leading the pack, showcasing the global evolution of cinema. This historic shift reflects the Academy's commitment to recognizing diverse storytelling and represents a major milestone in film industry inclusivity.",
         "image": "https://images.unsplash.com/photo-1585647347384-2593bc35786b?w=800",
         "date": "2025-11-16",
-        "likes": 727,
-        "is_liked": false
+        "likes": 728,
+        "is_liked": true
     },
     {
         "id": 5,
@@ -50,7 +50,7 @@
         "description": "A stunning 8K restoration of the 1939 classic Gone with the Wind has been completed after three years of painstaking work. The restoration team used AI-enhanced technology and original film elements to bring new life to this cinematic masterpiece. The restored version will premiere at select IMAX theaters before its digital release, offering audiences an unprecedented viewing experience.",
         "image": "https://images.unsplash.com/photo-1594908900066-3f47337549d8?w=800",
         "date": "2025-11-14",
-        "likes": 456,
-        "is_liked": false
+        "likes": 457,
+        "is_liked": true
     }
 ]

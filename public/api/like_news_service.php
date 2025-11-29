@@ -1,7 +1,7 @@
 <?php
 // like_news_service.php - Web Service v2 (POST - Toggle like status)
 header('Content-Type: application/json');
-require '../public/functions.php';
+require '../functions.php';
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     http_response_code(405);
@@ -21,7 +21,7 @@ try {
     $newsId = intval($input['news_id']);
     
     // Read news data FIRST to get current state
-    $newsData = read_json('../data/news.json');
+    $newsData = read_json('../../data/news.json');
     $currentIsLiked = false;
     $newLikes = 0;
     $found = false;
@@ -58,14 +58,14 @@ try {
     }
     
     // Save updated news data
-    $newsWriteResult = write_json('../data/news.json', $newsData);
+    $newsWriteResult = write_json('../../data/news.json', $newsData);
     
     if ($newsWriteResult === false) {
         throw new Exception('Failed to write news.json - check file permissions');
     }
     
     // Update favorites.json for consistency
-    $favorites = read_json('../data/favorites.json');
+    $favorites = read_json('../../data/favorites.json');
     
     if (!isset($favorites['news_likes'])) {
         $favorites['news_likes'] = [];
@@ -82,7 +82,7 @@ try {
     }
     
     // Save updated favorites
-    $favoritesWriteResult = write_json('../data/favorites.json', $favorites);
+    $favoritesWriteResult = write_json('../../data/favorites.json', $favorites);
     
     if ($favoritesWriteResult === false) {
         throw new Exception('Failed to write favorites.json - check file permissions');

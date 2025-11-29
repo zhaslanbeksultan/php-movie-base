@@ -2,7 +2,7 @@
 // get_news_comments.php - Web Service to get comments for a news article
 
 header('Content-Type: application/json');
-require '../public/functions.php';
+require '../functions.php';
 
 try {
     $newsId = intval($_GET['news_id'] ?? 0);
@@ -13,7 +13,7 @@ try {
     }
     
     // Read all comments
-    $allComments = read_json('../data/news_comments.json');
+    $allComments = read_json('../../data/news_comments.json');
     
     // Filter comments by news_id
     $newsComments = array_filter($allComments, function($comment) use ($newsId) {

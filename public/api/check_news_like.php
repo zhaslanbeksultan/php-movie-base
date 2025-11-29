@@ -1,7 +1,7 @@
 <?php
 // check_news_like.php - Check if user has liked a news article
 header('Content-Type: application/json');
-require '../public/functions.php';
+require '../functions.php';
 
 try {
     $newsId = intval($_GET['news_id'] ?? 0);
@@ -12,7 +12,7 @@ try {
     }
     
     // Read from news.json directly to get is_liked status
-    $newsData = read_json('../data/news.json');
+    $newsData = read_json('../../data/news.json');
     $isLiked = false;
     
     foreach ($newsData as $news) {
@@ -24,7 +24,7 @@ try {
     
     // Fallback to favorites.json if is_liked not found in news.json
     if (!$isLiked) {
-        $favorites = read_json('../data/favorites.json');
+        $favorites = read_json('../../data/favorites.json');
         $newsIdStr = (string)$newsId;
         $isLiked = isset($favorites['news_likes'][$newsIdStr]) && $favorites['news_likes'][$newsIdStr];
     }

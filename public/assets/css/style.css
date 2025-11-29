@@ -824,7 +824,7 @@ body.light-mode .notification-error {
   font-size: 3em;
   color: #ffd700;
   text-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
-  animation: float s ease-in-out infinite;
+  animation: float 2s ease-in-out infinite;
   z-index: 10;
 }
 

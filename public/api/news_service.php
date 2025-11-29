@@ -2,11 +2,11 @@
 // news_service.php - Web Service v1 (GET - Returns JSON data)
 
 header('Content-Type: application/json');
-require '../public/functions.php';
+require '../functions.php';
 
 try {
     // Read news data from JSON file
-    $news = read_json('../data/news.json');
+    $news = read_json('../../data/news.json');
     
     // Return news data as JSON
     echo json_encode($news);

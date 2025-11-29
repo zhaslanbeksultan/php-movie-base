@@ -4,7 +4,7 @@ const DataModule = (() => {
   // Fetch news data using modern fetch API
   const fetchNews = async () => {
     try {
-      const response = await fetch('../api/news_service.php');
+      const response = await fetch('api/news_service.php');
       if (!response.ok) throw new Error('Failed to fetch news');
       return await response.json();
     } catch (error) {
@@ -45,7 +45,7 @@ const DataModule = (() => {
   // Like a news article (POST request)
   const likeNews = async (newsId) => {
     try {
-      const response = await fetch('../api/like_news_service.php', {
+      const response = await fetch('api/like_news_service.php', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -21,7 +21,7 @@ const FavoritesModule = (() => {
 
 
         try {
-          const response = await fetch('toggle_favorite.php', {
+          const response = await fetch('api/toggle_favorite.php', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ movie_id: movieId })

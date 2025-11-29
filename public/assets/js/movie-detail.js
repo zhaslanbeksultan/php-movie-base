@@ -10,7 +10,7 @@
   // Check if movie is already in favorites
   const checkFavoriteStatus = async () => {
     try {
-      const response = await fetch('../api/check_favorite.php?movie_id=' + movieId);
+      const response = await fetch('api/check_favorite.php?movie_id=' + movieId);
       const data = await response.json();
 
       if (data.is_favorite) {
@@ -44,7 +44,7 @@
       } else if (clickCount === 2) {
         // Second click - add to favorites and show icon
         try {
-          const response = await fetch('../api/toggle_favorite.php', {
+          const response = await fetch('api/toggle_favorite.php', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ movie_id: movieId })

@@ -390,5 +390,13 @@
         "rating": 5,
         "text": "cool",
         "date": "2025-11-23"
+    },
+    {
+        "id": 50,
+        "movie_id": 2,
+        "author": "ev",
+        "rating": 4,
+        "text": "wv",
+        "date": "2025-11-29"
     }
 ]

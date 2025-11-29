@@ -20,7 +20,7 @@
     }
 
     // Check if user has liked this news
-    const likeStatus = await fetch(`../api/check_news_like.php?news_id=${newsId}`);
+    const likeStatus = await fetch(`api/check_news_like.php?news_id=${newsId}`);
     const likeData = await likeStatus.json();
 
     // Create detail page DOM elements
@@ -177,7 +177,7 @@
 // Load comments function
 async function loadComments(newsId) {
   try {
-    const response = await fetch(`../api/get_news_comments.php?news_id=${newsId}`);
+    const response = await fetch(`api/get_news_comments.php?news_id=${newsId}`);
     const comments = await response.json();
 
     const commentsList = document.getElementById('comments-list');
@@ -228,7 +228,7 @@ document.getElementById('comment-form').addEventListener('submit', async (e) => 
   }
 
   try {
-    const response = await fetch('../api/add_news_comment.php', {
+    const response = await fetch('api/add_news_comment.php', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formData)

@@ -2,7 +2,7 @@
 // check_favorite.php - Check if movie is in favorites
 
 header('Content-Type: application/json');
-require '../public/functions.php';
+require '../functions.php';
 
 try {
     $movieId = intval($_GET['movie_id'] ?? 0);
@@ -12,7 +12,7 @@ try {
         exit;
     }
     
-    $favorites = read_json('../data/favorites.json');
+    $favorites = read_json('../../data/favorites.json');
     $isFavorite = in_array($movieId, $favorites['movies']);
     
     echo json_encode([
