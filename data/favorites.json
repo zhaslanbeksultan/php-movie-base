@@ -1,21 +1,16 @@
 {
     "movies": [
-        1,
-        4,
-        2,
-        5,
         12,
         9,
         8,
         13,
-        7,
         10
     ],
     "news_likes": {
-        "1": true,
         "5": true,
         "3": true,
         "6": true,
-        "4": true
+        "4": true,
+        "1": true
     }
 }
