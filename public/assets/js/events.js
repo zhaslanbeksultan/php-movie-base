@@ -4,8 +4,8 @@ const EventsModule = (() => {
   // Initialize all event listeners
   const init = () => {
     setupNewsCardClicks();
-    setupBiggerPimpinButton();
-    setupBlingCheckbox();
+    // setupBiggerPimpinButton();
+    // setupBlingCheckbox();
     setupNewsFilter();
     setupLikeButtons();
   };
@@ -21,35 +21,35 @@ const EventsModule = (() => {
     });
   };
 
-  // Event 2: Click - Bigger Pimpin' Button (grows by 5% on each click)
-  const setupBiggerPimpinButton = () => {
-    const btn = document.getElementById('pimpin-btn');
-    if (!btn) return;
+  // // Event 2: Click - Bigger Pimpin' Button (grows by 5% on each click)
+  // const setupBiggerPimpinButton = () => {
+  //   const btn = document.getElementById('pimpin-btn');
+  //   if (!btn) return;
 
-    let scale = 1;
+  //   let scale = 1;
 
-    btn.addEventListener('click', () => {
-      scale += 0.05;
-      btn.style.transform = `scale(${scale})`;
-      btn.textContent = `Bigger! (${Math.round(scale * 100)}%)`;
-    });
-  };
+  //   btn.addEventListener('click', () => {
+  //     scale += 0.05;
+  //     btn.style.transform = `scale(${scale})`;
+  //     btn.textContent = `Bigger! (${Math.round(scale * 100)}%)`;
+  //   });
+  // };
 
-  // Event 3: Click - Bling Checkbox (Snoopify - toggles special styling)
-  const setupBlingCheckbox = () => {
-    const checkbox = document.getElementById('bling-checkbox');
-    if (!checkbox) return;
+  // // Event 3: Click - Bling Checkbox (Snoopify - toggles special styling)
+  // const setupBlingCheckbox = () => {
+  //   const checkbox = document.getElementById('bling-checkbox');
+  //   if (!checkbox) return;
 
-    checkbox.addEventListener('change', (e) => {
-      if (e.target.checked) {
-        document.body.classList.add('snoopified');
-        UIModule.showNotification('✨ Bling mode activated!', 'success');
-      } else {
-        document.body.classList.remove('snoopified');
-        UIModule.showNotification('Bling mode deactivated', 'info');
-      }
-    });
-  };
+  //   checkbox.addEventListener('change', (e) => {
+  //     if (e.target.checked) {
+  //       document.body.classList.add('snoopified');
+  //       UIModule.showNotification('✨ Bling mode activated!', 'success');
+  //     } else {
+  //       document.body.classList.remove('snoopified');
+  //       UIModule.showNotification('Bling mode deactivated', 'info');
+  //     }
+  //   });
+  // };
 
   // Event 4: Mouseover - News card hover effect
   const setupNewsHover = () => {
@@ -147,8 +147,8 @@ const EventsModule = (() => {
   return {
     init,
     setupNewsCardClicks,
-    setupBiggerPimpinButton,
-    setupBlingCheckbox,
+    // setupBiggerPimpinButton,
+    // setupBlingCheckbox,
     setupNewsHover,
     setupNewsFilter,
     setupLikeButtons

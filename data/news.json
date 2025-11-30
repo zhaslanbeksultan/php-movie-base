@@ -23,8 +23,8 @@
         "description": "Legendary filmmaker Martin Scorsese was honored with a Lifetime Achievement Award at this year's Film Festival. The 81-year-old director, known for masterpieces like Goodfellas, Taxi Driver, and The Departed, gave an emotional speech about the future of cinema and the importance of film preservation. His career spans over five decades with numerous critical and commercial successes.",
         "image": "https://images.unsplash.com/photo-1574267432644-f610a98f9341?w=800",
         "date": "2025-11-17",
-        "likes": 568,
-        "is_liked": true
+        "likes": 567,
+        "is_liked": false
     },
     {
         "id": 4,
@@ -46,6 +46,24 @@
     },
     {
         "id": 6,
+        "title": "Classic Film Restoration: Gone with the Wind in 8K",
+        "description": "A stunning 8K restoration of the 1939 classic Gone with the Wind has been completed after three years of painstaking work. The restoration team used AI-enhanced technology and original film elements to bring new life to this cinematic masterpiece. The restored version will premiere at select IMAX theaters before its digital release, offering audiences an unprecedented viewing experience.",
+        "image": "https://images.unsplash.com/photo-1594908900066-3f47337549d8?w=800",
+        "date": "2025-11-14",
+        "likes": 457,
+        "is_liked": true
+    },
+    {
+        "id": 7,
+        "title": "Quentin Tarantino Still Wants To Make A Kill Bill Prequel",
+        "description": "Quentin Tarantino has been adamant about not making a third Kill Bill movie, but he now revisits the idea of making a prequel. This update comes amid several exciting developments for the franchise, including the missing chapter for Kill Bill being released and The Whole Bloody Affair screening in select theaters for a limited time.\n\nThe Whole Bloody Affair is Kill Bill: Vol. 1 and Vol. 2 combined as a single, uncut movie, along with the animated short film \"The Lost Chapter: Yuki's Revenge.\" For those who want to see the animated story of Gogo Yubari's sister, Yuki, hunting down the Bride without watching the 4 hour and 41 minute runtime of The Whole Bloody Affair, the short is also being released via Fortnite.\n\nAt a screening of \"Yuki's Revenge\" that took place at Tarantino's Vista Theater in Los Angeles, Tarantino returned to an idea he'd spoken about previously, confirming that he still wants to make a prequel that explores Bill's origins. The story would incorporate the three characters who help Bill become a formidable assassin. Check out Tarantino's comments below:\n\n\"I've got other things to do right now, but I had a whole Kill Bill idea in my mind when we were doing it, and then I was so wiped out from doing the movie. I like the idea of a Bill origin. A story of Bill, about how Bill became Bill and the three godfathers that made Bill: Esteban Vihaio, Pai Mei, and Hattori Hanzō. Will I live long enough to do that? That remains to be seen.\"\n\nAnother unmade Quentin Tarantino project that has been mentioned before was also brought up by the filmmaker at the \"Yuki's Revenge\" screening after being asked about whether he will work with animation and motion-capture again. This involves a prequel featuring John Travolta's Vincent Vega from Pulp Fiction and Michael Madsen's Vic Vega from Reservoir Dogs.\n\n\"I could see some world between this and Japanese anime that I could find some happy medium or, you know, between the things that I couldn't physically do, like say the Vega Brothers movie, or something like that.\"\n\nTarantino makes it clear that these potential prequels are not a priority for him right now, but after his positive experience with \"Yuki's Revenge\" and with animation, he still wants to tell these stories. This comes as uncertainty surrounds Quentin Tarantino's next movie, especially after he scrapped plans for The Movie Critic, which was going to be the tenth and final feature film he directed.\n\nThis mysterious movie will likely be an entirely new story unrelated to anything that he has done before. Meanwhile, animation offers a means for him to expand on his existing movies, from Bill's origins to the Vega Brothers, which could become their own films or even a series.\n\nWith the original Bill actor, David Carradine, passing away in 2009, a new actor would need to voice the titular character in a potential Kill Bill prequel. Tarantino voices Bill in \"Yuki's Revenge\" and could do so again, or he could cast a new actor for the part. In addition to his Reservoir Dogs character, Madsen played Budd (Sidewinder) in Kill Bill: Vol. 2, but he passed away in 2025, meaning his role would need to be voiced by another actor in a Vega Brothers prequel.",
+        "image": "https://static0.srcdn.com/wordpress/wp-content/uploads/2025/11/kill-bill-vol-2_37300c-cropped.jpg?q=70&fit=crop&w=1600&h=900&dpr=1",
+        "date": "2025-11-30",
+        "likes": 4547,
+        "is_liked": true
+    },
+    {
+        "id": 8,
         "title": "Classic Film Restoration: Gone with the Wind in 8K",
         "description": "A stunning 8K restoration of the 1939 classic Gone with the Wind has been completed after three years of painstaking work. The restoration team used AI-enhanced technology and original film elements to bring new life to this cinematic masterpiece. The restored version will premiere at select IMAX theaters before its digital release, offering audiences an unprecedented viewing experience.",
         "image": "https://images.unsplash.com/photo-1594908900066-3f47337549d8?w=800",
