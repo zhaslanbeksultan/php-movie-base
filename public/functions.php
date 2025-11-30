@@ -42,27 +42,6 @@ function write_json($filepath, $data) {
     return true;
 }
 
-/**
- * Check if file is writable
- */
-function check_writable($filepath) {
-    if (!file_exists($filepath)) {
-        $dir = dirname($filepath);
-        return is_writable($dir);
-    }
-    return is_writable($filepath);
-}
-
-/**
- * Get file permissions in readable format
- */
-function get_file_permissions($filepath) {
-    if (!file_exists($filepath)) {
-        return 'File does not exist';
-    }
-    return substr(sprintf('%o', fileperms($filepath)), -4);
-}
-
 function get_movie_by_id($movies, $id) {
     foreach ($movies as $movie) {
         if ($movie['id'] == $id) return $movie;

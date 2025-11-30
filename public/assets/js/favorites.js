@@ -1,14 +1,9 @@
 // favorites.js - Favorites page controller
 
 const FavoritesModule = (() => {
-  let currentView = 'grid';
-  let pimpinScale = 1;
 
   const init = () => {
     setupRemoveButtons();
-    setupBiggerPimpinButton();
-    setupBlingCheckbox();
-    setupViewSwitcher();
     applyInitialAnimations();
   };
 

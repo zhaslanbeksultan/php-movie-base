@@ -2036,39 +2036,3 @@ footer {
   background: #cc0000;
   transform: scale(1.05);
 }
-
-/* View switcher */
-.view-switcher {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
-
-.view-btn {
-  background: #2a2a2a;
-  border: 2px solid #444;
-  color: #fff;
-  padding: 8px 15px;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: all 0.3s;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.view-btn:hover {
-  border-color: #ffcc00;
-  transform: scale(1.05);
-}
-
-.view-btn.active {
-  background: #ffcc00;
-  color: #000;
-  border-color: #ffcc00;
-}
-
-.view-btn span {
-  font-size: 1.2em;
-}
