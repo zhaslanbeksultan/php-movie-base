@@ -1,0 +1,90 @@
+/* ==== Header & Footer ==== */
+header,
+footer {
+    background-color: #111;
+    padding: 15px 0;
+    text-align: center;
+    color: #ffcc00;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+nav li {
+    display: inline;
+    margin: 0 15px;
+}
+
+/* ==== Header layout ==== */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    /* space between title and nav */
+    align-items: center;
+    /* vertically center both */
+    max-width: 1200px;
+    /* optional: limit width */
+    margin: 0 auto;
+    /* center horizontally */
+    padding: 0 20px;
+    /* spacing from screen edges */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8em;
+    color: #ffcc00;
+    white-space: nowrap;
+    /* prevents wrapping */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    /* align menu items in one row */
+    gap: 20px;
+    /* spacing between items */
+}
+
+nav a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    color: #ffffff;
+}
+
+/* ==== Logo Styling ==== */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* space between image and text */
+}
+
+.logo img {
+    width: 40px;
+    /* adjust as needed */
+    height: 40px;
+    object-fit: contain;
+}
+
+.logo span {
+    color: #ffcc00;
+    font-size: 1.8em;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* ==== Footer ==== */
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    color: #aaa;
+    background-color: #111;
+}
